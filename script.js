@@ -3,14 +3,15 @@ const todo = document.querySelector("#todo")
 const progress = document.querySelector("#progress")
 const done = document.querySelector("#done")
 const tasks = document.querySelectorAll(".task")
-    const addTaskBtn = document.querySelector("#addtask")
- 
+const addTaskBtn = document.querySelector("#add-new-task")
+
  const modal = document.querySelector(".modal")
 
  let draggedTask = null
  tasks.forEach((task) => {
      task.addEventListener("dragstart", () => {
          draggedTask = task
+         console.log("jeee")
      })
  
      task.addEventListener("dragend", () => {
@@ -107,12 +108,13 @@ function addtask(title, desc, column) {
 (function modalHandler(){
 
    
-    const toggleModalBtn = document.querySelector("#toggle-modal")
+    const toggleModalBtn = document.querySelector(".toggle-modal")
     const modalBg = document.querySelector(".bg")
 
     
     toggleModalBtn.addEventListener("click", (dets) => {
         modal.classList.toggle("active")
+        
     })
     modalBg.addEventListener("click", (dets) => {
         modal.classList.remove("active")
@@ -151,6 +153,7 @@ const taskInfo = taskInfoEl.value;
 
 addtask(textInp, taskInfo, todo);
  modal.classList.remove("active")
+ updateCounts()
 textInpEl.value = '';
 taskInfoEl.value = '';
 })
