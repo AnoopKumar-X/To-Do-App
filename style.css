@@ -39,7 +39,7 @@ html,body{
     height: 36rem;
     width: 30vw;
     border-radius: 8px;
-    background-color: rgba(42, 42, 97, 0.76); 
+    background-color: rgba(64, 64, 105, 0.76); 
 }
 main{
     display: flex;
@@ -75,9 +75,12 @@ flex-direction: column;
     border-radius: 3px;
 }
 .hover-over{
-    border: 2px dashed red ;
+    border: 2px dashed rgb(141, 134, 134) ;
     scale: 1.1;
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) ;
+}
+.modal.active{
+   display:flex ;
 }
 
 .modal{
@@ -86,7 +89,7 @@ flex-direction: column;
     width: 100vw;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -121,7 +124,7 @@ background-color: rgba(78, 78, 112, 0.76);
      border: none;
  outline: none;
  border-radius: 10px;
- background-color: blueviolet;
+ background-color: rgb(112, 40, 179);
 }
 .modal .bg{
     position: absolute;
